@@ -1,0 +1,1 @@
+Este site foi feito com o tutorial da [PythonAcademy](https://pythonacademy.com.br/blog/desenvolvimento-web-com-python-e-django-introducao). É um site de gerenciamento de funcionarios, utilizando o padrão/operação CRUD
