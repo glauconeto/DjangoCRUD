@@ -1,4 +1,4 @@
-from helloworld.models import Funcionario
+from .models import Funcionario
 from django import forms
 
 
@@ -16,10 +16,8 @@ class InsereFuncionarioForm(forms.ModelForm):
     )
 
     class Meta:
-        # Modelo base
         model = Funcionario
 
-        # Campos que estarão no form
         fields = [
             'nome',
             'sobrenome',

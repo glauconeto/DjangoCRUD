@@ -1,7 +1,7 @@
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView
-from helloworld.models import Funcionario
-from website.forms import InsereFuncionarioForm
+from .models import Funcionario
+from .forms import InsereFuncionarioForm
 
 
 class IndexTemplateView(TemplateView):
@@ -21,9 +21,6 @@ class FuncionarioCreateView(CreateView):
     success_url = reverse_lazy("website:lista_funcionarios")
 
 
-# ATUALIZAÇÃO DE FUNCIONÁRIOS
-# ----------------------------------------------
-
 class FuncionarioUpdateView(UpdateView):
     template_name = "atualiza.html"
     model = Funcionario
@@ -31,9 +28,6 @@ class FuncionarioUpdateView(UpdateView):
     context_object_name = 'funcionario'
     success_url = reverse_lazy("website:lista_funcionarios")
 
-
-# EXCLUSÃO DE FUNCIONÁRIOS
-# ----------------------------------------------
 
 class FuncionarioDeleteView(DeleteView):
     template_name = "exclui.html"
