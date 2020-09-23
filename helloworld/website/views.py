@@ -1,8 +1,13 @@
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, ListView, UpdateView, CreateView, DeleteView
+from django.views.generic import (
+    TemplateView, 
+    ListView, 
+    UpdateView, 
+    CreateView, 
+    DeleteView,
+)
 from .models import Funcionario
 from .forms import InsereFuncionarioForm
-
 
 class IndexTemplateView(TemplateView):
     template_name = "website/index.html"
